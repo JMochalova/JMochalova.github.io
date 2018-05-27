@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Заявка</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://smtpjs.com/v2/smtp.js"></script>
+<script>
+var as = '';
+as = param("asic");
+
+function AsicLoad()
+{
+document.getElementById('asic').selectedIndex = as; 
+}
+
+function SendMail()
+{
+var nBody = '';
+nBody = "<html><body>";
+nBody += "Имя: " + document.getElementById('name').value + "<br>";
+nBody += "Фамилия: " + document.getElementById('lastname').value + "<br>";
+nBody += "Телефон: " + document.getElementById('phone').value + "<br>";
+nBody += "E-mail: " + document.getElementById('email').value + "<br>";
+nBody += "Товар: " + document.getElementById('asic').options[document.getElementById('asic').selectedIndex].value + "<br>";
+nBody += "</body></html>";
+
+Email.send("asic00@list.ru",
+"m.m.darastrix@gmail.com",
+"Запрос с сайта",
+nBody,
+"smtp.list.ru",
+"asic00",
+"Qweasd123");
+alert('Ваша заявка успешно принята');
+window.location = "success.html"
+}
+
+function param(Name)
+{
+var Params = location.search.substring(1).split("&");
+var variable = "";
+for (var i = 0; i < Params.length; i++)
+{
+if(Params[i].split("=")[0] == Name)
+{
+if (Params[i].split("=").length > 1)
+variable = Params[i].split("=")[1];
+return variable;
+}}
+return "";
+} 
+
+</script>
+
+</head>
+
+<body onload="AsicLoad();" style="background-image: url(assets/img/cubes.png);">
+
+    <header>
+        <h2 class="swing">
+            <a title="Mining World Главная" href="index.html">Mining World</a>
+        </h2>
+        <nav>
+            <li>
+                <a title="Mining World Главная" href='index.html'>Главная</a>
+            </li>
+            <li>
+                <a title="Каталог товаров" href='product.html'>Каталог</a>
+            </li>
+            <li>
+                <a title="Описание Услуг" href='about.html'>Услуги</a>
+            </li>
+            <li>
+                <a title="Свяжитесь с нами" href="contacts.html">Контакты</a>
+            </li>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="order">
+            <h2>Оставить заявку</h2>
+            <p>Оставьте заявку на интересующий вас товар.<br>
+            Внимательно проверьте введенную информацию!</p>
+            <form>
+                <p>
+                    <select id="asic">
+                        <option>Antminer L3</option>
+                        <option>Antminer S9 13Т</option>
+                        <option>Antminer Z9 mini</option>
+                        <option>Antminer E3</option>
+                    </select>
+                </p>
+                <p>
+                    <input name="name" value="" id="name" placeholder="Имя">
+                </p>
+                <p>
+                    <input name="lastname" value="" id="lastname" placeholder="Фамилия">
+                </p>
+                <p>
+                    <input name="phone" value="" id="phone" placeholder="Телефон">
+                </p>
+                <p>
+                    <input name="email" value="" id="email" placeholder="email">
+                </p>
+                <p>
+                    <input class="btn" type="button" value="Отправить заказ" onclick="javascript:SendMail();">
+                </p>
+            </form>
+        </div>
+    </main>
+    <footer class='footer'>
+			<div class="breadcrumbs">
+					<a title="Mining World Главная"  href="index.html">Главная</a>
+					<a title="Каталог товаров" href="product.html">Каталог</a>
+					<a title="Оставить заявку" class="active" href="order.html">Заявка</a>
+				</div>
+		<ul>
+			<li>
+				<a title="Twitter" href="https://www.twitter.com/">
+					<i class="fab fa-twitter-square"></i>
+				</a>
+			</li>
+			<li>
+				<a title="Facebook" href="https://www.facebook.com/">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li>
+				<a title="Telegram" href="https://www.telegram.org/">
+					<i class="fab fa-telegram"></i>
+				</a>
+			</li>
+			<li>
+				<a title="Google" href="https://www.google.ru">
+					<i class="fab fa-google-plus-square"></i>
+				</a>
+			</li>
+			<li>
+				<a title="GitHub" href="https://github.com/">
+					<i class="fab fa-github-alt"></i>
+				</a>
+			</li>
+		</ul>
+		<p>Made with love by JMochlova
+			
+		</p>
+		<p></p>
+	</footer>
+
+
+</body>
+
+</html>

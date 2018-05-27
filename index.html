@@ -1,9 +1,206 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> </title>
-    </head>
-    <body>
- <h1>Hi!</h1>
-    </body>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Antminer</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://smtpjs.com/v2/smtp.js"></script>
+</head>
+
+<script>
+
+function SendMail()
+{
+var nBody = '';
+nBody = "<html><body>"
+nBody += "Подписка с адреса: " + document.getElementById('mail').value + "<br>";
+nBody += "</body></html>";
+
+Email.send("asic00@list.ru",
+"m.m.darastrix@gmail.com",
+"Подписка с сайта",
+nBody,
+"smtp.list.ru",
+"asic00",
+"Qweasd123");
+alert('Вы успешно подписались');
+window.location = "success_s.html"
+}
+</script>
+
+<body>
+		<video poster="vidbg.jpg" id="bgvid" playsinline autoplay muted loop>
+				<source src="assets/img/vidbg.webm" type="video/webm">
+				<source src="assets/img/vidbg.mp4" type="video/mp4">
+				</video>
+	<header>
+		<h2 class="swing">
+			<a title="Mining World" href="index.html">Mining World</a>
+		</h2>
+		<nav>
+			<li>
+				<a title="Mining World Главная" href="index.html">Главная</a>
+			</li>
+			<li>
+				<a title="Каталог Продукции" href="product.html">Каталог</a>
+			</li>
+			<li>
+				<a title="Описание Услуг" href="about.html">Услуги</a>
+			</li>
+			<li>
+				<a  title="Свяжитесь с нами" href="contacts.html">Контакты</a>
+			</li>
+		</nav>
+	</header>
+
+
+	<section class="hero">
+		<div class="background-image" style="background-image: url(assets/img/vidbg.jpg);"></div>
+		<h1>Начать майнить сегодня</h1>
+		<h3>с нами можешь ты</h3>
+		<a  title="Оставить заявку" href="order.html" class="btn">Оставить заявку</a>
+	</section>
+
+	<section class="features">
+		<h3 class="title">Условия и Услуги</h3>
+		<p>Мы оказываем все необходимые услуги, связанные с приобретением ASIC. Мы можете быть уверены, что мы доставим, установим и протестируем все приобретенное вами оборудование. При необходимости, вы можете обратиться в наш сервис-центр или к менеджерам за дополнительной консультацией. Мы делаем все, чтобы повысить продуктивность работы и оптимизировать ваши расходы.</p>
+		<hr>
+
+		<ul class="grid">
+			<!-- <li>
+				<i class="fas fa-certificate"></i>
+				<h4>Это просто</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices vitae pulvinar velit.</p>
+			</li> -->
+			<li>
+				<i class="fas fa-user-secret"></i>
+				<h4>Это анонимно</h4>
+				<p>Мы гарантируем полную конфиденциальность предоставляемой вами информации. Все ваши данные зашифрованы и анонимны.</p>
+			</li>
+			<li>
+				<i class="fa fa-hand-spock"></i>
+				<h4>Мы поможем</h4>
+				<p>Все наши клиенты получают полную бесплатную консультацию по любым вопросам, связанным с доставкой, хранением и размещением оборудования.</p>
+			</li>
+			<li>
+				<i class="fas fa-shipping-fast"></i>
+				<h4>Быстрая доставка</h4>
+				<p>Мы быстрее конкурентов в среднем на 20&#37;.Наши сотрудники отдела логистики ежедневно следят за изменениями в работе служб доставки и выбирают оптимальный вариант.</p>
+			</li>
+			<li>
+				<i class="fab fa-galactic-republic"></i>
+				<h4>Разместите у нас</h4>
+				<p>Если вы не знаете, где разместить оборудование, мы предлагаем услуги размещения в специализированном помещении, где созданы все необходимые условия.</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="our-work">
+		<h4 class="title">Наши товары</h4>
+		<p>Мы предоставляем только проверенное оборудование отличного качества, со всеми комплектующими, включая блоки питания и силовые кабели необходимого сечения.</p>
+		<hr>
+
+		<div class="grid">
+			<div class="large">
+				<div class="small img" style="background-image: url(assets/img/s9i.png);"></div>
+				<div class="small">
+					<h3 class="title">Antminer L3</h3>
+					<p>Производитель&#58; Bitmain
+						<br> Хэшрейт&#58; 504 Mh&#47;s
+						<br> Алгоритм&#58; Scrypt
+						<br> Валюта&#58; LTC
+						<br> Ожидаемый заработок в сутки&#58; 2.5 USD</p>
+					<a title="Заказать Antminer L3"  href="order.html?asic=0" class="btn">Оставить заказ</a>
+				</div>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="large">
+				<div class="small img" style="background-image: url(assets/img/s9i.png);"></div>
+				<div class="small">
+					<h3 class="title">Antminer Z9 mini</h3>
+					<p>Производитель&#58; Bitmain
+						<br> Хэшрейт&#58; 504 Mh&#47;s
+						<br> Алгоритм&#58; Equihash
+						<br> Валюта&#58; ZEC, BTG, KMD, ZEN, HUSH
+						<br> Ожидаемый заработок в сутки&#58; 26.64 USD</p>
+					<a title="Заказать Antminer Z9 mini" href="order.html?asic=2" class="btn">Оставить заказ</a>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="grid">
+		<div class="large">
+			<div class="small img" style="background-image: url(assets/img/s9i.png);"></div>
+			<div class="small">
+				<h4 class="title">Some of our Products</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar
+					velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.
+				</p>
+				<a href="" class="btn">Оставить заказ</a>
+			</div>
+		</div>
+</div> -->
+	</section>
+
+
+	<section class="contact">
+		<h3 class="title">Подписаться на новости</h3>
+		<p>Каждую неделю мы собираем для вас лучшие новости о технологиях блокчейн и криптовалютах, а так же делаем специальные предложения для подписчиков! </p>
+		<hr>
+
+		<form>
+			<input type="email" id="mail" placeholder="Email">
+			<a title="Подписаться на новости" class="btn" onclick="javascript:SendMail();">Подписаться</a>
+		</form>
+	</section>
+
+	<footer class='footer'>
+			<div class="breadcrumbs">
+					<a title="Mining World Главная" class="active" href="index.html">Главная</a>
+					<a title="Каталог товаров" href="product.html">Каталог</a>
+					<a title="Оставить заявку" href="order.html">Заявка</a>
+				</div>
+		<ul>
+			<li>
+				<a title="Twitter" href="https://www.twitter.com/">
+					<i class="fab fa-twitter-square"></i>
+				</a>
+			</li>
+			<li>
+				<a title="Twitter" title="Facebook" href="https://www.facebook.com/">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li>
+				<a title="Telegram" href="https://www.telegram.org/">
+					<i class="fab fa-telegram"></i>
+				</a>
+			</li>
+			<li>
+				<a title="Google" href="https://www.google.ru">
+					<i class="fab fa-google-plus-square"></i>
+				</a>
+			</li>
+			<li>
+				<a title="GitHub" href="https://github.com/">
+					<i class="fab fa-github-alt"></i>
+				</a>
+			</li>
+		</ul>
+		<p>Made with love by JMochlova
+			
+		</p>
+		<p></p>
+	</footer>
+
+</body>
+
 </html>

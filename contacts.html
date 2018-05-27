@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакты</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://smtpjs.com/v2/smtp.js"></script>
+</head>
+
+<script>
+
+        function SendMail()
+        {
+        var nBody = '';
+        nBody = "<html><body>"
+        nBody += "Просьба связаться с: " + document.getElementById('iemail').value + "<br>";
+        nBody += "От: " + document.getElementById('itext').value + "<br>";
+        nBody += "Вопрос: " + document.getElementById('iquest').value + "<br>";
+        nBody += "</body></html>";
+        
+        Email.send("asic00@list.ru",
+        "m.m.darastrix@gmail.com",
+        "Попытка связаться с сайта",
+        nBody,
+        "smtp.list.ru",
+        "asic00",
+        "Qweasd123");
+        alert('Ваш запрос успешно отправлен');
+        window.location = "success_q.html"
+        }
+        </script>
+
+<body style="background-image: url(assets/img/cubes.png);">
+
+<header>
+		<h2 class="swing">
+			<a title="Mining World" href="index.html">Mining World</a>
+		</h2>
+		<nav>
+			<li>
+				<a title="Mining World Главная" href="index.html">Главная</a>
+			</li>
+			<li>
+				<a title="Каталог Продукции" href="product.html">Каталог</a>
+			</li>
+			<li>
+				<a title="Описание Услуг" href="about.html">Услуги</a>
+			</li>
+			<li>
+				<a  title="Свяжитесь с нами" href="contacts.html">Контакты</a>
+			</li>
+		</nav>
+	</header>
+    <main class="main">
+        <section class="contact-body">
+            <section class="info">
+                <h2>Свяжитесь с нами</h2>
+                <p>Если вы хотите оставить заказ по телефону, или у вас остались вопросы, вы можете связаться с нами по следующим реквизитам&#58;<br>
+                    <i class="fas fa-phone-volume"></i>&#160;&#43;375&#40;17&#41;102&#45;39&#45;48<br>
+                    <i class="fab fa-telegram"></i>&#160;<i class="fab fa-viber"></i>&#160;&#43;375&#40;29&#41;102&#45;39&#45;48<br>
+                    <i class="fas fa-at"></i>&#160;asic00&#64;list.ru<br>
+                    Или приезжайте в наш офис по адресу<br>
+                    г.Минск, Проспект Победителей, д.5<br>
+                    Мы работаем ежедневно с 10 до 19
+                </p>
+            </section>
+
+            <div class="map">
+                <iframe src="https://yandex.by/map-widget/v1/-/CBqHiSbEcC" width="560" height="400" frameborder="0"></iframe>
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!4v1527400631546!6m8!1m7!1sCAoSLEFGMVFpcE0yT3BLLWNiOUsxc1lTQWtXWHk1Q3RrYVBKWmhaUC1rbzBKdWhL!2m2!1d53.90791119382114!2d27.55034878849983!3f175.81277093357747!4f11.410156255737846!5f0.7820865974627469" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+            </div>
+        </section>
+
+        <section class="contact">
+            <h3 class="title">Напишите нам</h3>
+            <p>По любым вопросам, вы можете отправить нам письмо. Наш менеджер свяжется с вами в кратчайшие сроки.</p>
+            <hr>
+            <!-- <form>      
+                    <input name="name" type="text" class="feedback-input" placeholder="Ваше имя"/>   
+                    <input name="email" type="text" class="feedback-input" placeholder="Контактный Email"/>
+                    <textarea name="text" class="feedback-input" placeholder="Задайте свой вопрос"></textarea>
+                    <input class='btn' type="submit" value="SUBMIT"/>
+                  </form> -->
+            <form method="post">
+                <input name="name" type="text" id="itext" placeholder="Ваше имя"/>
+                <input name="email" type="email" id="iemail" placeholder="Контактный Email">
+                <textarea rows="10" cols="50" name="text" id="iquest" class="feedback-input" placeholder="Задайте свой вопрос"></textarea>
+                <input class="btn" type="button" onclick="javascript:SendMail();" value="Отправить">
+            </form>
+        </section>
+    </main>
+        <footer class='footer'>
+                <div class="breadcrumbs">
+                        <a title="Mining World Главная" href="index.html">Главная</a>
+                        <a title="Свяжитесь с нами" class="active" href="contacts.html">Контакты</a>
+                    </div>
+            <ul>
+                <li>
+                    <a title="Twitter" href="https://www.twitter.com/">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Facebook" href="https://www.facebook.com/">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Telegram" href="https://www.telegram.org/">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="Google" href="https://www.google.ru">
+                        <i class="fab fa-google-plus-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="GitHub" href="https://github.com/">
+                        <i class="fab fa-github-alt"></i>
+                    </a>
+                </li>
+            </ul>
+            <p>Made with love by JMochlova
+
+                
+            </p>
+            <p></p>
+        </footer>
+
+</body>
+
+</html>
