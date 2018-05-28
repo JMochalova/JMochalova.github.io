@@ -488,10 +488,12 @@ padding: 1ex;
 
 	.our-work .grid .small,
 	.our-work .grid .large{
-		flex-basis: 100%;
-		flex-direction: column;
-	}
+    font-size: 18px;
+    flex-basis: 100%;
+    flex-direction: column;
 }
+}
+
 @media (max-width: 450px){
 	.hero h3{
 		font: bold 25px;
@@ -838,18 +840,22 @@ main .grid {
 	  }
 	  section.contact-body{
 		padding: 20px 20px;
-	  font-size: 15px;}
+	  font-size: 20px;}
 	  section.info{
 		  padding: 20px 20px;
 	  }
-	  section.contact{font-size: 15px;}
+	  section.contact{font-size: 20px;}
+	  
+	  section.contact form{
+	  	font-size: 20px;
+	  }
   }
 
 
   /* Order section */
 
 .order{
-	padding: 75px;
+	padding: 10%;
 }
 .order input, select, p, h2{
 	margin-bottom: 10px;
@@ -882,11 +888,12 @@ main .grid {
 		font-size: 10ex;
 	}
 	.breadcrumbs {
+		font-size: 20px;
 		display: inline-block;
 		margin: 150px 0;
 		counter-reset: flag;
 		color: black;
-		box-shadow: 0 0 2px #aaa;
+	
 	}
 	
 	.breadcrumbs a {
@@ -911,7 +918,7 @@ main .grid {
 		width: 36px;
 		height: 36px;
 		background: white;
-		box-shadow: 1px 1px 0 1px #ddd;
+	
 		border-radius: 50px 0 0 0;
 		transform: rotate(-45deg) scale(0.73);
 		transition: all 0.5s;
@@ -931,7 +938,6 @@ main .grid {
 		top: 8px;
 		left: 30px;
 		line-height: 20px;
-		box-shadow: 0 0 2px #ccc;
 		width: 20px; background-color: white;
 		border-radius: 50%;
 	}
@@ -943,3 +949,5 @@ main .grid {
 	.breadcrumbs a:first-child::before {
 		left: 14px;
 	}
+	
+	@media {}
